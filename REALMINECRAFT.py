@@ -39,7 +39,7 @@ class Voxel(Button):
             parent=scene,
             position=position,
             #Η ursina δεν εχει UV MAP αρα θα πρεπει να φτιαξουμε εμεισ ενα αντικειμανο που να εχει ωστε να κανουμε πανω του apply το texture
-            model='cube',
+            model='assets/Grass_block_real',
             origin_y=0.5,
             texture=texture,
             color=color.color(0, 0, random.uniform(0.9, 1)),
@@ -85,7 +85,7 @@ class Hand(Entity):
         super().__init__(
             parent=camera.ui,
             #τα custom models εχουν προβλημα
-            model='assets/arm',
+            model='assets/arm_real',
             texture=arm_texture,
             scale=0.2,
             #Τοποθετηση χεριου στην οθονη
@@ -103,8 +103,8 @@ class Hand(Entity):
 
 
 #ενθετη for για να χτιστουν τα τουβλακια σε δυο διαστασεις στο πατωμα
-for z in range(20):
-    for x in range(20):
+for z in range(25):
+    for x in range(25):
         voxel = Voxel(position=(x, 0, z))
 
 #FPS controlls
